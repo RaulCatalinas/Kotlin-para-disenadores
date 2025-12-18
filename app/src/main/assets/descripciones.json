@@ -1,0 +1,75 @@
+{
+  "layouts": [
+    {
+      "id": "constraintlayout",
+      "titulo": "ConstraintLayout",
+      "descripcion": "Es el 'organizador' de la pantalla. Te permite posicionar cada elemento creando 'relaciones' o 'anclas' con otros elementos o con los bordes. Es muy flexible y potente, similar al Auto Layout de Figma/Sketch."
+    },
+    {
+      "id": "linearlayout",
+      "titulo": "LinearLayout",
+      "descripcion": "Un organizador simple que apila los elementos uno detrás de otro, ya sea en una columna vertical (uno debajo del otro) o en una fila horizontal (uno al lado del otro)."
+    }
+  ],
+  "componentes_ui": [
+    {
+      "id": "textview",
+      "titulo": "TextView",
+      "descripcion": "El elemento para mostrar texto estático. Úsalo para títulos, etiquetas, párrafos o cualquier información que el usuario solo necesite leer, pero no modificar."
+    },
+    {
+      "id": "edittext",
+      "titulo": "EditText",
+      "descripcion": "Un campo de texto para que el usuario pueda escribir. Es el elemento que usas para un buscador, un formulario de inicio de sesión o para introducir un nombre."
+    },
+    {
+      "id": "button",
+      "titulo": "Button",
+      "descripcion": "El elemento interactivo por excelencia. Su función es que el usuario lo presione para ejecutar una acción, como 'Enviar', 'Guardar', 'Buscar' o 'Siguiente'."
+    },
+    {
+      "id": "imageview",
+      "titulo": "ImageView",
+      "descripcion": "Sirve para mostrar imágenes en tu pantalla. Puedes usarlo para logos, fotos, iconos o cualquier recurso gráfico. Puede ser estático o también puede usarse como un botón."
+    },
+    {
+      "id": "toolbar",
+      "titulo": "Toolbar",
+      "descripcion": "La barra superior de la aplicación. Generalmente contiene el título de la pantalla, un menú de opciones (los tres puntos) o un botón para volver atrás."
+    }
+  ],
+  "archivos_y_carpetas": [
+    {
+      "id": "activity_main",
+      "titulo": "Activity Main (.xml)",
+      "descripcion": "Es el 'plano' de tu pantalla principal. Como una mesa de trabajo en Figma, aquí colocas y diseñas visualmente todos los elementos que el usuario verá."
+    },
+    {
+      "id": "main_activity",
+      "titulo": "MainActivity (.kt)",
+      "descripcion": "Es el 'cerebro' detrás de tu pantalla. Este archivo en Kotlin contiene las instrucciones y la lógica. Conecta el diseño visual (.xml) con la acción."
+    },
+    {
+      "id": "drawable",
+      "titulo": "Carpeta 'drawable'",
+      "descripcion": "La carpeta para tus recursos gráficos. Aquí van las imágenes (PNG, JPG) o incluso archivos XML que definen formas con colores y bordes redondeados (fondos personalizados)."
+    },
+    {
+      "id": "mipmap",
+      "titulo": "Carpeta 'mipmap'",
+      "descripcion": "Una carpeta especial dedicada exclusivamente a los íconos de la aplicación ('launchers'). Android gestiona los íconos aquí para asegurar que se vean nítidos en todos los dispositivos."
+    }
+  ],
+  "conceptos_clave": [
+    {
+      "id": "id",
+      "titulo": "ID (android:id)",
+      "descripcion": "Es el 'nombre único' que le das a cada elemento en tu archivo .xml. Este nombre te permite 'llamar' o 'encontrar' a ese elemento desde tu archivo .kt (el código) para poder manipularlo."
+    },
+    {
+      "id": "view_binding",
+      "titulo": "View Binding",
+      "descripcion": "Es la técnica moderna para conectar de forma segura y fácil los elementos del layout (.xml) con el código Kotlin (.kt), evitando errores comunes."
+    }
+  ]
+}
