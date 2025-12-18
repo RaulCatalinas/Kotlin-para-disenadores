@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#5527A4"
-    tools:context=".MainActivity">
+    tools:context="com.jorge.kotlin_para_disenadores.MainActivity">
 
     <ImageView
         android:id="@+id/main_activity"
@@ -14,6 +14,7 @@
         android:layout_height="170dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="32dp"
+        android:tag="main_activity"
         app:layout_constraintBottom_toTopOf="@+id/guideline5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline"
@@ -25,19 +26,21 @@
         android:layout_width="170dp"
         android:layout_height="170dp"
         android:layout_marginTop="16dp"
+        android:tag="activity_main"
         app:layout_constraintBottom_toTopOf="@+id/guideline5"
         app:layout_constraintEnd_toStartOf="@+id/main_activity"
-        app:layout_constraintHorizontal_bias="0.717"
+        app:layout_constraintHorizontal_bias="0.923"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline"
         app:layout_constraintVertical_bias="0.526"
         app:srcCompat="@drawable/activity_main" />
 
     <ImageView
-        android:id="@+id/imageView6"
+        android:id="@+id/build_gradle"
         android:layout_width="170dp"
         android:layout_height="170dp"
         android:layout_marginEnd="32dp"
+        android:tag="pantalla"
         app:layout_constraintBottom_toTopOf="@+id/guideline2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline5"
@@ -48,8 +51,10 @@
         android:id="@+id/andorid_manifest"
         android:layout_width="170dp"
         android:layout_height="170dp"
+        android:layout_marginStart="28dp"
+        android:tag="manifest"
         app:layout_constraintBottom_toTopOf="@+id/guideline2"
-        app:layout_constraintEnd_toStartOf="@+id/imageView6"
+        app:layout_constraintEnd_toStartOf="@+id/build_gradle"
         app:layout_constraintHorizontal_bias="0.717"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline5"
@@ -72,7 +77,7 @@
         app:layout_constraintVertical_bias="0.722" />
 
     <ImageView
-        android:id="@+id/imageView10"
+        android:id="@+id/limpiar_pantalla"
         android:layout_width="41dp"
         android:layout_height="41dp"
         android:layout_marginTop="4dp"
@@ -90,6 +95,7 @@
         android:layout_height="100dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="28dp"
+        android:tag="instancia"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline2"
         app:srcCompat="@drawable/instanmcia" />
@@ -100,6 +106,7 @@
         android:layout_height="100dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="28dp"
+        android:tag="metodo"
         app:layout_constraintEnd_toStartOf="@+id/instancia"
         app:layout_constraintTop_toTopOf="@+id/guideline2"
         app:srcCompat="@drawable/metodo" />
@@ -110,6 +117,7 @@
         android:layout_height="100dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="24dp"
+        android:tag="constructor"
         app:layout_constraintEnd_toStartOf="@+id/metodo"
         app:layout_constraintHorizontal_bias="0.967"
         app:layout_constraintStart_toStartOf="parent"
@@ -117,7 +125,7 @@
         app:srcCompat="@drawable/constructor" />
 
     <EditText
-        android:id="@+id/textView2"
+        android:id="@+id/pantalla_descripcion"
         android:layout_width="353dp"
         android:layout_height="170dp"
         android:textColor="#FFFCFC"
@@ -128,20 +136,21 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline4" />
 
-    <SearchView
-        android:id="@+id/textView3"
-        android:layout_width="352dp"
-        android:layout_height="41dp"
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/busqueda"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
         android:background="#8E62D8"
-        android:hint="haz tu búsqueda"
-        android:textColor="#FFFCFC"
-        android:textColorHighlight="#F6E5E5"
-        android:textSize="24sp"
+        app:iconifiedByDefault="false"
+        app:queryHint="Busca un concepto..."
         app:layout_constraintBottom_toTopOf="@+id/guideline4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline3"
         app:layout_constraintVertical_bias="0.4" />
+
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline"
