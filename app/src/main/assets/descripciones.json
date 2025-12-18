@@ -3,73 +3,193 @@
     {
       "id": "constraintlayout",
       "titulo": "ConstraintLayout",
-      "descripcion": "Es el 'organizador' de la pantalla. Te permite posicionar cada elemento creando 'relaciones' o 'anclas' con otros elementos o con los bordes. Es muy flexible y potente, similar al Auto Layout de Figma/Sketch."
+      "descripcion": "Es el 'organizador' de la pantalla. Te permite posicionar cada elemento creando 'relaciones' o 'anclas' con otros elementos o con los bordes. Es el equivalente al Auto Layout de Figma."
     },
     {
       "id": "linearlayout",
       "titulo": "LinearLayout",
-      "descripcion": "Un organizador simple que apila los elementos uno detrás de otro, ya sea en una columna vertical (uno debajo del otro) o en una fila horizontal (uno al lado del otro)."
+      "descripcion": "Un organizador simple que apila los elementos uno detrás de otro de forma secuencial, ya sea en una columna vertical o en una fila horizontal."
+    },
+    {
+      "id": "framelayout",
+      "titulo": "FrameLayout",
+      "descripcion": "Un contenedor para superponer elementos (como capas). El último elemento añadido se dibuja encima de los anteriores."
+    }
+  ],
+  "botones": [
+    {
+      "id": "button",
+      "titulo": "Button",
+      "descripcion": "El botón estándar con texto para acciones claras como 'Aceptar' o 'Siguiente'."
+    },
+    {
+      "id": "imagebutton",
+      "titulo": "ImageButton",
+      "descripcion": "Un botón que solo contiene un icono o imagen. Ideal para botones de 'Cerrar' o redes sociales."
+    },
+    {
+      "id": "fab",
+      "titulo": "FloatingActionButton",
+      "descripcion": "El botón circular que flota sobre la interfaz para la acción principal, como redactar un mensaje."
     }
   ],
   "componentes_ui": [
     {
       "id": "textview",
       "titulo": "TextView",
-      "descripcion": "El elemento para mostrar texto estático. Úsalo para títulos, etiquetas, párrafos o cualquier información que el usuario solo necesite leer, pero no modificar."
+      "descripcion": "Etiqueta para mostrar texto estático que el usuario no puede modificar."
     },
     {
       "id": "edittext",
       "titulo": "EditText",
-      "descripcion": "Un campo de texto para que el usuario pueda escribir. Es el elemento que usas para un buscador, un formulario de inicio de sesión o para introducir un nombre."
-    },
-    {
-      "id": "button",
-      "titulo": "Button",
-      "descripcion": "El elemento interactivo por excelencia. Su función es que el usuario lo presione para ejecutar una acción, como 'Enviar', 'Guardar', 'Buscar' o 'Siguiente'."
+      "descripcion": "Campo de entrada donde el usuario puede escribir texto, correos o contraseñas."
     },
     {
       "id": "imageview",
       "titulo": "ImageView",
-      "descripcion": "Sirve para mostrar imágenes en tu pantalla. Puedes usarlo para logos, fotos, iconos o cualquier recurso gráfico. Puede ser estático o también puede usarse como un botón."
+      "descripcion": "Componente para mostrar fotos, ilustraciones o iconos vectoriales."
     },
     {
-      "id": "toolbar",
-      "titulo": "Toolbar",
-      "descripcion": "La barra superior de la aplicación. Generalmente contiene el título de la pantalla, un menú de opciones (los tres puntos) o un botón para volver atrás."
+      "id": "scrollview",
+      "titulo": "ScrollView",
+      "descripcion": "Un contenedor que permite al usuario hacer scroll si el contenido es más alto que la pantalla física."
     }
   ],
-  "archivos_y_carpetas": [
+  "notificaciones_ui": [
     {
-      "id": "activity_main",
-      "titulo": "Activity Main (.xml)",
-      "descripcion": "Es el 'plano' de tu pantalla principal. Como una mesa de trabajo en Figma, aquí colocas y diseñas visualmente todos los elementos que el usuario verá."
+      "id": "toast",
+      "titulo": "Toast",
+      "descripcion": "Un pequeño mensaje flotante que aparece en la parte inferior y desaparece solo tras unos segundos. Útil para avisos rápidos."
     },
     {
-      "id": "main_activity",
-      "titulo": "MainActivity (.kt)",
-      "descripcion": "Es el 'cerebro' detrás de tu pantalla. Este archivo en Kotlin contiene las instrucciones y la lógica. Conecta el diseño visual (.xml) con la acción."
-    },
-    {
-      "id": "drawable",
-      "titulo": "Carpeta 'drawable'",
-      "descripcion": "La carpeta para tus recursos gráficos. Aquí van las imágenes (PNG, JPG) o incluso archivos XML que definen formas con colores y bordes redondeados (fondos personalizados)."
-    },
-    {
-      "id": "mipmap",
-      "titulo": "Carpeta 'mipmap'",
-      "descripcion": "Una carpeta especial dedicada exclusivamente a los íconos de la aplicación ('launchers'). Android gestiona los íconos aquí para asegurar que se vean nítidos en todos los dispositivos."
+      "id": "snackbar",
+      "titulo": "Snackbar",
+      "descripcion": "Similar al Toast, pero permite incluir una acción (como 'Deshacer') y visualmente está más integrado con Material Design."
     }
   ],
-  "conceptos_clave": [
+  "activities_y_ciclo": [
     {
-      "id": "id",
-      "titulo": "ID (android:id)",
-      "descripcion": "Es el 'nombre único' que le das a cada elemento en tu archivo .xml. Este nombre te permite 'llamar' o 'encontrar' a ese elemento desde tu archivo .kt (el código) para poder manipularlo."
+      "id": "activity",
+      "titulo": "Activity",
+      "descripcion": "Representa una pantalla de la app. Es el contenedor donde vive tu diseño y la lógica de interacción."
     },
     {
-      "id": "view_binding",
-      "titulo": "View Binding",
-      "descripcion": "Es la técnica moderna para conectar de forma segura y fácil los elementos del layout (.xml) con el código Kotlin (.kt), evitando errores comunes."
+      "id": "oncreate",
+      "titulo": "onCreate()",
+      "descripcion": "El momento en que la pantalla nace. Aquí se infla el diseño XML y se preparan los componentes."
+    },
+    {
+      "id": "onstart",
+      "titulo": "onStart()",
+      "descripcion": "La pantalla está a punto de ser visible para el usuario."
+    },
+    {
+      "id": "onresume",
+      "titulo": "onResume()",
+      "descripcion": "La pantalla ya es visible y está lista para que el usuario interactúe con ella."
+    },
+    {
+      "id": "onpause",
+      "titulo": "onPause()",
+      "descripcion": "El usuario está saliendo de la pantalla. Se usa para pausar tareas que no deben seguir activas."
+    },
+    {
+      "id": "onstop",
+      "titulo": "onStop()",
+      "descripcion": "La pantalla ya no es visible, pero sigue en memoria."
+    },
+    {
+      "id": "ondestroy",
+      "titulo": "onDestroy()",
+      "descripcion": "La pantalla se cierra definitivamente y se libera el espacio en memoria."
+    }
+  ],
+  "archivos_y_configuracion": [
+    {
+      "id": "android_manifest",
+      "titulo": "AndroidManifest.xml",
+      "descripcion": "El archivo de identidad de la app. Define el icono, el nombre, los permisos y las pantallas existentes."
+    },
+    {
+      "id": "gradle",
+      "titulo": "Gradle",
+      "descripcion": "El sistema que compila la app. Aquí se gestionan las librerías externas y versiones de Android."
+    },
+    {
+      "id": "colors_xml",
+      "titulo": "colors.xml",
+      "descripcion": "La paleta cromática centralizada para mantener la consistencia visual en toda la app."
+    }
+  ],
+  "programacion_poo": [
+    {
+      "id": "clase",
+      "titulo": "Clase",
+      "descripcion": "Es el molde o plano. Define qué es un objeto y qué puede hacer."
+    },
+    {
+      "id": "instancia",
+      "titulo": "Instancia / Objeto",
+      "descripcion": "Es el elemento real creado con el molde. La clase es el plano de una silla, la instancia es la silla donde te sientas."
+    },
+    {
+      "id": "constructor",
+      "titulo": "Constructor",
+      "descripcion": "La función que se encarga de inicializar el objeto cuando se crea por primera vez."
+    },
+    {
+      "id": "herencia",
+      "titulo": "Herencia",
+      "descripcion": "Permite que una clase tome características de otra. Por ejemplo, un Coche hereda de Vehículo."
+    },
+    {
+      "id": "override",
+      "titulo": "Override",
+      "descripcion": "Significa 'sobrescribir'. Se usa para cambiar el comportamiento de una función que hemos heredado de otra clase."
+    },
+    {
+      "id": "singleton",
+      "titulo": "Singleton",
+      "descripcion": "Un patrón que asegura que solo exista una única instancia de una clase en toda la aplicación."
+    }
+  ],
+  "tipos_de_datos": [
+    {
+      "id": "int",
+      "titulo": "Int",
+      "descripcion": "Números enteros sin decimales (ej: 1, 10, -500)."
+    },
+    {
+      "id": "double",
+      "titulo": "Double",
+      "descripcion": "Números con decimales de alta precisión (ej: 3.1416)."
+    },
+    {
+      "id": "boolean",
+      "titulo": "Boolean",
+      "descripcion": "Valores lógicos que solo pueden ser verdaderos (true) o falsos (false)."
+    },
+    {
+      "id": "string",
+      "titulo": "String",
+      "descripcion": "Cadenas de texto o caracteres (ej: 'Hola Mundo')."
+    }
+  ],
+  "kotlin_avanzado_y_log": [
+    {
+      "id": "corrutinas",
+      "titulo": "Corrutinas",
+      "descripcion": "Permiten realizar tareas pesadas (como descargar datos) en segundo plano sin bloquear la interfaz."
+    },
+    {
+      "id": "log_d",
+      "titulo": "Log.d()",
+      "descripcion": "Una herramienta de depuración que imprime mensajes ocultos en la consola para que los desarrolladores vean qué está pasando internamente."
+    },
+    {
+      "id": "null_safety",
+      "titulo": "Null Safety",
+      "descripcion": "El sistema de Kotlin para evitar que la app se cuelgue cuando intenta acceder a datos que no existen."
     }
   ]
 }
