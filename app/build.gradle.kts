@@ -6,13 +6,13 @@ plugins {
 }
 
 android {
-    namespace = "com.jorge.kotlin_para_diseadores"
+    namespace = "com.jorge.kotlin_para_disenadores"
     compileSdk {
         version = release(36)
     }
 
     defaultConfig {
-        applicationId = "com.jorge.kotlin_para_diseadores"
+        applicationId = "com.jorge.kotlin_para_disenadores"
         minSdk = 24
         targetSdk = 36
         versionCode = 1
