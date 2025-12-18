@@ -7,9 +7,14 @@ fun Descripciones.todosLosIdentificables(): List<Identificable> {
     val resultado = mutableListOf<Identificable>()
 
     if (layouts.isNotEmpty()) resultado.addAll(layouts)
-    if (componentesUI.isNotEmpty()) resultado.addAll(componentesUI)
-    if (archivosYCarpetas.isNotEmpty()) resultado.addAll(archivosYCarpetas)
-    if (conceptosClave.isNotEmpty()) resultado.addAll(conceptosClave)
+    if (botones.isNotEmpty()) resultado.addAll(botones)
+    if (componentesUi.isNotEmpty()) resultado.addAll(componentesUi)
+    if (notificacionesUi.isNotEmpty()) resultado.addAll(notificacionesUi)
+    if (activitiesYCiclo.isNotEmpty()) resultado.addAll(activitiesYCiclo)
+    if (archivosYConfiguracion.isNotEmpty()) resultado.addAll(archivosYConfiguracion)
+    if (programacionPoo.isNotEmpty()) resultado.addAll(programacionPoo)
+    if (tiposDeDatos.isNotEmpty()) resultado.addAll(tiposDeDatos)
+    if (kotlinAvanzadoYLog.isNotEmpty()) resultado.addAll(kotlinAvanzadoYLog)
 
     return resultado
 }
