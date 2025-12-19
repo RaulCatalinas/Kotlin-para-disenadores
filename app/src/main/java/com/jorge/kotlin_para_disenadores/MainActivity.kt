@@ -1,11 +1,15 @@
 package com.jorge.kotlin_para_disenadores
 
+import android.graphics.Color
 import android.os.Bundle
 import android.text.SpannableStringBuilder
 import android.util.Log
 import android.view.View
 import android.view.inputmethod.InputMethodManager
+import android.widget.EditText
+import android.widget.ImageView
 import androidx.activity.enableEdgeToEdge
+import androidx.annotation.ColorInt
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.text.bold
 import androidx.core.text.italic
@@ -35,6 +39,8 @@ class MainActivity : AppCompatActivity() {
         texto = SpannableStringBuilder()
         JsonRepository.init(this)
         ManagerBusqueda(binding.busqueda).configurarOnSubmit()
+
+        cambiarColorSearchView(Color.WHITE)
 
         binding.mainActivity.setOnClickListener {
             mostrarDescripcion(IdsDescripciones.MAINACTIVITY, it)
@@ -103,5 +109,34 @@ class MainActivity : AppCompatActivity() {
     fun View.ocultarTeclado() {
         val imm = context.getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager
         imm.hideSoftInputFromWindow(windowToken, 0)
+    }
+
+    fun cambiarColorSearchView(@ColorInt colorTexto: Int) {
+        val editText =
+            binding
+                .busqueda
+                .findViewById<EditText>(androidx.appcompat.R.id.search_src_text)
+
+        // Cambiar color del ícono de búsqueda (lupa)
+        val searchIcon =
+            binding
+                .busqueda.findViewById<ImageView>(androidx.appcompat.R.id.search_button)
+
+        // Cambiar color del ícono de cierre (X)
+        val closeIcon =
+            binding
+                .busqueda
+                .findViewById<ImageView>(androidx.appcompat.R.id.search_close_btn)
+
+        // Cambiar color del ícono de la lupa dentro del campo (search_mag_icon)
+        val magIcon =
+            binding
+                .busqueda
+                .findViewById<ImageView>(androidx.appcompat.R.id.search_mag_icon)
+
+        searchIcon.setColorFilter(colorTexto)
+        closeIcon.setColorFilter(colorTexto)
+        magIcon.setColorFilter(colorTexto)
+        editText.setTextColor(colorTexto)
     }
 }
