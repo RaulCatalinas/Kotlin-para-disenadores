@@ -1,11 +1,15 @@
 package com.jorge.kotlin_para_disenadores
 
 import android.os.Bundle
+import android.text.SpannableStringBuilder
 import android.util.Log
 import android.view.View
 import android.view.inputmethod.InputMethodManager
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.text.bold
+import androidx.core.text.italic
+import androidx.core.text.scale
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.jorge.kotlin_para_disenadores.constants.IdsDescripciones
@@ -15,6 +19,7 @@ import com.jorge.kotlin_para_disenadores.repositories.JsonRepository
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
+    private lateinit var texto: SpannableStringBuilder
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,6 +32,7 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
+        texto = SpannableStringBuilder()
         JsonRepository.init(this)
         ManagerBusqueda(binding.busqueda).configurarOnSubmit()
 
@@ -75,7 +81,16 @@ class MainActivity : AppCompatActivity() {
         }
 
         scrollHastaArribaDelTodo()
-        binding.pantallaDescripcion.text = item.descripcion
+        texto.clear()
+
+        texto.bold { appendLine(item.titulo) }
+        texto.scale(0.9f) { italic { appendLine("Dificultad: ${item.nivel}") } }
+        texto.appendLine()
+        texto.scale(0.8f) { appendLine(item.descripcion) }
+        texto.appendLine()
+        texto.scale(0.75f) { appendLine("Relacionados: ${item.relacionados.joinToString(", ")}") }
+
+        binding.pantallaDescripcion.text = texto
     }
 
     fun scrollHastaArribaDelTodo() {
