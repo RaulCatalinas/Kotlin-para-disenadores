@@ -43,6 +43,11 @@ object IdsDescripciones {
     const val STRINGS_XML = "strings_xml"
     const val DRAWABLE = "drawable"
 
+    // Programación Básica
+    const val VARIABLE = "variable"
+    const val CONSTANTE = "constante"
+    const val FUNCION = "funcion"
+
     // Programación POO
     const val CLASE = "clase"
     const val INSTANCIA = "instancia"
@@ -51,8 +56,6 @@ object IdsDescripciones {
     const val HERENCIA = "herencia"
     const val OVERRIDE = "override"
     const val SINGLETON = "singleton"
-    const val VARIABLE = "variable"
-    const val FUNCION = "funcion"
 
     // Tipos de Datos
     const val INT = "int"

@@ -17,6 +17,7 @@ private fun Descripciones.todosLosIdentificables(): List<Identificable> {
         notificacionesUi,
         programacionPoo,
         tiposDeDatos,
+        programacionBasica
     ).flatten()
 }
 

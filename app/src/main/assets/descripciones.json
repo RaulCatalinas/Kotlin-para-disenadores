@@ -320,6 +320,42 @@
       ]
     }
   ],
+  "programacion_basica": [
+    {
+      "id": "variable",
+      "titulo": "Variable",
+      "nivel": "básico",
+      "descripcion": "Un contenedor que guarda un valor que puede cambiar durante la ejecución de la app.\n\nComo una caja etiquetada donde guardas información: `var edad = 25`, `var nombreUsuario = \"Ana\"`. En Kotlin se declara con `var` y puedes cambiar su valor en cualquier momento.\n\nEjemplo: `var contador = 0` luego puedes hacer `contador = 5`",
+      "relacionados": [
+        "constante",
+        "int",
+        "string",
+        "boolean",
+        "double"
+      ]
+    },
+    {
+      "id": "constante",
+      "titulo": "Constante",
+      "nivel": "básico",
+      "descripcion": "Un contenedor que guarda un valor que NO puede cambiar una vez asignado.\n\nComo una caja sellada: una vez que le das un valor, queda fijo para siempre. En Kotlin se declara con `val` o `const val`.\n\nÚsala para valores que no deben cambiar: `val PI = 3.1416`, `val MAX_INTENTOS = 3`, `val NOMBRE_APP = \"MiApp\"`. Intentar cambiarla causará un error de compilación.",
+      "relacionados": [
+        "variable",
+        "int",
+        "string"
+      ]
+    },
+    {
+      "id": "funcion",
+      "titulo": "Función",
+      "nivel": "básico",
+      "descripcion": "Un bloque de código reutilizable que realiza una tarea específica.\n\nComo una receta: defines los pasos una vez y luego la ejecutas cuando la necesites. Puede recibir datos (parámetros) y devolver un resultado.\n\nEjemplo: `fun calcularTotal(precio: Double, cantidad: Int): Double` devuelve el total a pagar.",
+      "relacionados": [
+        "metodo",
+        "variable"
+      ]
+    }
+  ],
   "programacion_poo": [
     {
       "id": "clase",
@@ -357,8 +393,9 @@
       "id": "metodo",
       "titulo": "Método",
       "nivel": "básico",
-      "descripcion": "Una acción o función que puede realizar un objeto de una clase.\n\nComo las acciones que tiene un botón: puede cambiar de color, moverse, cambiar su texto, ejecutar una animación. Ejemplos: `mostrar()`, `ocultar()`, `calcular()`, `guardar()`.",
+      "descripcion": "Una acción o función que pertenece a una clase y puede realizar un objeto.\n\nComo las acciones que tiene un botón: puede cambiar de color, moverse, cambiar su texto, ejecutar una animación. Ejemplos: `mostrar()`, `ocultar()`, `calcular()`, `guardar()`.\n\nLa diferencia con función: los métodos pertenecen a una clase, las funciones pueden ser independientes.",
       "relacionados": [
+        "funcion",
         "clase",
         "constructor",
         "override"
@@ -393,28 +430,6 @@
       "relacionados": [
         "clase",
         "instancia"
-      ]
-    },
-    {
-      "id": "variable",
-      "titulo": "Variable",
-      "nivel": "básico",
-      "descripcion": "Un contenedor que guarda un valor que puede cambiar durante la ejecución de la app.\n\nComo una caja etiquetada donde guardas información: `edad = 25`, `nombreUsuario = \"Ana\"`. En Kotlin se declara con `var` (puede cambiar) o `val` (no puede cambiar, es constante).",
-      "relacionados": [
-        "int",
-        "string",
-        "boolean",
-        "double"
-      ]
-    },
-    {
-      "id": "funcion",
-      "titulo": "Función",
-      "nivel": "básico",
-      "descripcion": "Un bloque de código reutilizable que realiza una tarea específica.\n\nComo una receta: defines los pasos una vez y luego la ejecutas cuando la necesites. Puede recibir datos (parámetros) y devolver un resultado.\n\nEjemplo: `calcularTotal(precio, cantidad)` devuelve el total a pagar.",
-      "relacionados": [
-        "metodo",
-        "clase"
       ]
     }
   ],
