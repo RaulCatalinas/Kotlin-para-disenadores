@@ -6,14 +6,14 @@ import com.jorge.kotlin_para_disenadores.utils.cargarJsonDesdeAssets
 import com.jorge.kotlin_para_disenadores.utils.construirMapaIds
 
 object JsonRepository {
-    private lateinit var lookupMap: Map<String, Identificable>
+    private lateinit var mapaBusquedaPorId: Map<String, Identificable>
     private lateinit var appContext: Context
 
     fun init(context: Context) {
         appContext = context.applicationContext
         val data = appContext.cargarJsonDesdeAssets("descripciones.json")
-        lookupMap = data.construirMapaIds()
+        mapaBusquedaPorId = data.construirMapaIds()
     }
 
-    fun getItemPorId(id: String) = lookupMap[id]
+    fun getItemPorId(id: String) = mapaBusquedaPorId[id]
 }

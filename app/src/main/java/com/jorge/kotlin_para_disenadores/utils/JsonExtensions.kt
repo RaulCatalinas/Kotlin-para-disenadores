@@ -5,15 +5,18 @@ import com.jorge.kotlin_para_disenadores.types.Identificable
 
 private fun Descripciones.todosLosIdentificables(): List<Identificable> {
     return listOf(
-        layouts,
-        botones,
-        componentesUi,
-        notificacionesUi,
         activitiesYCiclo,
         archivosYConfiguracion,
+        botones,
+        componentesUi,
+        conceptosFundamentales,
+        estructuraProyecto,
+        interaccion,
+        kotlinAvanzadoYLog,
+        layouts,
+        notificacionesUi,
         programacionPoo,
         tiposDeDatos,
-        kotlinAvanzadoYLog
     ).flatten()
 }
 

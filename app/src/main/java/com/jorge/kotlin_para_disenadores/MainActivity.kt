@@ -2,6 +2,7 @@ package com.jorge.kotlin_para_disenadores
 
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -27,7 +28,7 @@ class MainActivity : AppCompatActivity() {
         JsonRepository.init(this)
 
         binding.mainActivity.setOnClickListener {
-            mostrarDescripcion(IdsDescripciones.MAIN_ACTIVITY_KT)
+            mostrarDescripcion(IdsDescripciones.MAINACTIVITY)
         }
 
         binding.activityMain.setOnClickListener {
@@ -64,6 +65,14 @@ class MainActivity : AppCompatActivity() {
             return
         }
 
+        scrollHastaArribaDelTodo()
         binding.pantallaDescripcion.text = item.descripcion
+    }
+
+    fun scrollHastaArribaDelTodo() {
+        binding.scrollDescripcion.post {
+            binding.scrollDescripcion.fullScroll(View.FOCUS_UP)
+            binding.scrollDescripcion.smoothScrollTo(0, 0)
+        }
     }
 }

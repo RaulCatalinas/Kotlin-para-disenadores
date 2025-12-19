@@ -16,14 +16,18 @@ object IdsDescripciones {
     const val EDITTEXT = "edittext"
     const val IMAGEVIEW = "imageview"
     const val SCROLLVIEW = "scrollview"
+    const val RECYCLERVIEW = "recyclerview"
+    const val CARDVIEW = "cardview"
 
     // Notificaciones UI
     const val TOAST = "toast"
     const val SNACKBAR = "snackbar"
+    const val DIALOG = "dialog"
 
     // Activities y Ciclo
     const val ACTIVITY = "activity"
-    const val MAIN_ACTIVITY_KT = "mainactivity"
+    const val MAINACTIVITY = "mainactivity"
+    const val INTENT = "intent"
     const val ONCREATE = "oncreate"
     const val ONSTART = "onstart"
     const val ONRESUME = "onresume"
@@ -36,6 +40,8 @@ object IdsDescripciones {
     const val ACTIVITY_MAIN_XML = "activity_main_xml"
     const val GRADLE = "gradle"
     const val COLORS_XML = "colors_xml"
+    const val STRINGS_XML = "strings_xml"
+    const val DRAWABLE = "drawable"
 
     // Programación POO
     const val CLASE = "clase"
@@ -45,15 +51,32 @@ object IdsDescripciones {
     const val HERENCIA = "herencia"
     const val OVERRIDE = "override"
     const val SINGLETON = "singleton"
+    const val VARIABLE = "variable"
+    const val FUNCION = "funcion"
 
     // Tipos de Datos
     const val INT = "int"
     const val DOUBLE = "double"
     const val BOOLEAN = "boolean"
     const val STRING = "string"
+    const val CHAR = "char"
+
+    // Interacción
+    const val ONCLICK = "onclick"
+    const val ONLONGCLICK = "onlongclick"
 
     // Kotlin Avanzado y Log
     const val CORRUTINAS = "corrutinas"
-    const val LOG_D = "log_d"
+    const val LOG = "log"
     const val NULL_SAFETY = "null_safety"
+
+    // Conceptos Fundamentales
+    const val XML = "xml"
+    const val VIEW = "view"
+    const val ID = "id"
+    const val CONTEXT = "context"
+
+    // Estructura Proyecto
+    const val PAQUETE = "paquete"
+    const val RES = "res"
 }
