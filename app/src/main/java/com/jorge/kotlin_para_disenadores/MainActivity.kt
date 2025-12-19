@@ -30,6 +30,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         binding = ActivityMainBinding.inflate(layoutInflater)
+        texto = SpannableStringBuilder()
         setContentView(binding.root)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
@@ -37,7 +38,17 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-        texto = SpannableStringBuilder()
+        actualizarEstadoVistas(
+            inactivas = listOf(
+                binding.mainActivity,
+                binding.activityMain,
+                binding.andoridManifest,
+                binding.buildGradle,
+                binding.constructor,
+                binding.metodo,
+                binding.instancia
+            )
+        )
         JsonRepository.init(this)
         ManagerBusqueda(binding.busqueda).configurarOnSubmit()
 
@@ -45,98 +56,112 @@ class MainActivity : AppCompatActivity() {
         cambiarColorIconosSearchView(Color.WHITE)
 
         binding.mainActivity.setOnClickListener {
-            activarVista(
+            actualizarEstadoVistas(
                 binding.mainActivity,
-                binding.activityMain,
-                binding.andoridManifest,
-                binding.buildGradle,
-                binding.constructor,
-                binding.metodo,
-                binding.instancia
+                listOf(
+                    binding.activityMain,
+                    binding.andoridManifest,
+                    binding.buildGradle,
+                    binding.constructor,
+                    binding.metodo,
+                    binding.instancia
+                )
             )
 
             mostrarDescripcion(IdsDescripciones.MAINACTIVITY, it)
         }
 
         binding.activityMain.setOnClickListener {
-            activarVista(
+            actualizarEstadoVistas(
                 binding.activityMain,
-                binding.mainActivity,
-                binding.andoridManifest,
-                binding.buildGradle,
-                binding.constructor,
-                binding.metodo,
-                binding.instancia
+                listOf(
+                    binding.mainActivity,
+                    binding.andoridManifest,
+                    binding.buildGradle,
+                    binding.constructor,
+                    binding.metodo,
+                    binding.instancia
+                )
             )
 
             mostrarDescripcion(IdsDescripciones.ACTIVITY_MAIN_XML, it)
         }
 
         binding.andoridManifest.setOnClickListener {
-            activarVista(
+            actualizarEstadoVistas(
                 binding.andoridManifest,
-                binding.mainActivity,
-                binding.activityMain,
-                binding.buildGradle,
-                binding.constructor,
-                binding.metodo,
-                binding.instancia
+                listOf(
+                    binding.mainActivity,
+                    binding.activityMain,
+                    binding.buildGradle,
+                    binding.constructor,
+                    binding.metodo,
+                    binding.instancia
+                )
             )
 
             mostrarDescripcion(IdsDescripciones.ANDROID_MANIFEST, it)
         }
 
         binding.buildGradle.setOnClickListener {
-            activarVista(
+            actualizarEstadoVistas(
                 binding.buildGradle,
-                binding.mainActivity,
-                binding.activityMain,
-                binding.andoridManifest,
-                binding.constructor,
-                binding.metodo,
-                binding.instancia
+                listOf(
+                    binding.mainActivity,
+                    binding.activityMain,
+                    binding.andoridManifest,
+                    binding.constructor,
+                    binding.metodo,
+                    binding.instancia
+                )
             )
 
             mostrarDescripcion(IdsDescripciones.GRADLE, it)
         }
 
         binding.constructor.setOnClickListener {
-            activarVista(
+            actualizarEstadoVistas(
                 binding.constructor,
-                binding.mainActivity,
-                binding.activityMain,
-                binding.andoridManifest,
-                binding.buildGradle,
-                binding.metodo,
-                binding.instancia
+                listOf(
+                    binding.mainActivity,
+                    binding.activityMain,
+                    binding.andoridManifest,
+                    binding.buildGradle,
+                    binding.metodo,
+                    binding.instancia
+                )
             )
 
             mostrarDescripcion(IdsDescripciones.CONSTRUCTOR, it)
         }
 
         binding.metodo.setOnClickListener {
-            activarVista(
+            actualizarEstadoVistas(
                 binding.metodo,
-                binding.mainActivity,
-                binding.activityMain,
-                binding.andoridManifest,
-                binding.buildGradle,
-                binding.constructor,
-                binding.instancia
+                listOf(
+                    binding.mainActivity,
+                    binding.activityMain,
+                    binding.andoridManifest,
+                    binding.buildGradle,
+                    binding.constructor,
+                    binding.instancia
+                )
             )
 
             mostrarDescripcion(IdsDescripciones.METODO, it)
         }
 
         binding.instancia.setOnClickListener {
-            activarVista(
+            actualizarEstadoVistas(
                 binding.instancia,
-                binding.mainActivity,
-                binding.activityMain,
-                binding.andoridManifest,
-                binding.buildGradle,
-                binding.constructor,
-                binding.metodo,
+                listOf(
+                    binding.mainActivity,
+                    binding.activityMain,
+                    binding.andoridManifest,
+                    binding.buildGradle,
+                    binding.constructor,
+                    binding.metodo,
+                )
             )
 
             mostrarDescripcion(IdsDescripciones.INSTANCIA, it)
@@ -216,8 +241,8 @@ class MainActivity : AppCompatActivity() {
         magIcon.setColorFilter(colorIconos)
     }
 
-    fun activarVista(activa: View, vararg inactivas: View) {
-        activa.alpha = UiConstantes.ALPHA_ACTIVO
+    fun actualizarEstadoVistas(activa: View? = null, inactivas: Collection<View>) {
+        activa?.alpha = UiConstantes.ALPHA_ACTIVO
         inactivas.forEach { it.alpha = UiConstantes.ALPHA_INACTIVO }
     }
 }
